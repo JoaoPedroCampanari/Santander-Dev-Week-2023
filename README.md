@@ -30,8 +30,8 @@ classDiagram
         -description: String
     }
 
-    User --> Account
-    User --> Feature
-    User --> Card
-    User --> News
+    User *-- Account
+    User *-- Feature
+    User *-- Card
+    User *-- News
 ```
