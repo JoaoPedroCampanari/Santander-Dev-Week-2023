@@ -26,10 +26,10 @@ public class UserServerImpl implements UserService {
     @Override
     public User create(User userToCreate) {
         if (userToCreate.getId() != null && userRepository.existsById(userToCreate.getId())){
-            throw new IllegalArgumentException("This Account number alredy exists!");
+            throw new IllegalArgumentException("This Account number alredy exists.");
         }
         else if (userRepository.existsByAccountNumber(userToCreate.getAccount().getNumber())){
-            throw new IllegalArgumentException("This user ID alredy exists!");
+            throw new IllegalArgumentException("This user ID alredy exists.");
         }
 
         return userRepository.save(userToCreate);
